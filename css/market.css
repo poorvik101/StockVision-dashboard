@@ -1,0 +1,401 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background: #0f172a;
+    color: white;
+}
+
+/* ================= NAVBAR ================= */
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background: #111827;
+}
+
+.logo{
+    font-size: 24px;
+    font-weight: 600;
+    color: #38bdf8;
+}
+
+.nav-links{
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links a{
+    text-decoration: none;
+    color: white;
+}
+
+/* ================= HEADER ================= */
+
+.dashboard-header{
+    text-align: center;
+    padding: 80px 10%;
+}
+
+.dashboard-header h1{
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+/* ================= SEARCH ================= */
+
+.search-section{
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+#searchInput{
+    width: 60%;
+    padding: 15px;
+    border-radius: 10px;
+    border: none;
+    font-size: 16px;
+}
+
+/* ================= MARKET INFO ================= */
+
+.market-info{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    padding: 50px 8%;
+}
+
+.market-card{
+    background: #1e293b;
+    padding: 30px;
+    border-radius: 15px;
+    width: 250px;
+    text-align: center;
+}
+
+.market-card h3{
+    margin-bottom: 15px;
+}
+
+#marketStatus{
+    color: #4ade80;
+    font-weight: bold;
+}
+
+/* ================= STOCKS ================= */
+
+.gainers,
+.losers{
+    padding: 80px 8%;
+}
+
+.gainers h2,
+.losers h2{
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.stock-grid{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.stock-card{
+    background: #1e293b;
+    padding: 30px;
+    width: 250px;
+    border-radius: 15px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.stock-card:hover{
+    transform: translateY(-10px);
+}
+
+.price{
+    font-size: 28px;
+    margin: 15px 0;
+}
+
+.positive{
+    color: #4ade80;
+    font-weight: 600;
+}
+
+.negative{
+    color: #f87171;
+    font-weight: 600;
+}
+
+/* ================= CRYPTO ================= */
+
+.crypto-section{
+    padding: 100px 8%;
+    text-align: center;
+}
+
+.crypto-container{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.crypto-card{
+    background: #1e293b;
+    width: 250px;
+    padding: 40px;
+    border-radius: 15px;
+}
+
+.crypto-card i{
+    font-size: 50px;
+    color: gold;
+    margin-bottom: 20px;
+}
+
+/* ================= CHART ================= */
+
+.chart-section{
+    padding: 100px 8%;
+    text-align: center;
+}
+
+#marketChart{
+    margin-top: 40px;
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+}
+
+/* ================= CONVERTER ================= */
+
+.converter-section{
+    padding: 100px 8%;
+    text-align: center;
+}
+
+.converter-box{
+    background: #1e293b;
+    padding: 40px;
+    border-radius: 15px;
+    width: 400px;
+    margin: auto;
+}
+
+.converter-box input{
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border: none;
+}
+
+.converter-box button{
+    padding: 12px 25px;
+    border: none;
+    background: #38bdf8;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+#result{
+    margin-top: 20px;
+}
+
+/* ================= FOOTER ================= */
+
+.footer{
+    background: #111827;
+    text-align: center;
+    padding: 20px;
+    color: #94a3b8;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width: 768px){
+
+    .dashboard-header h1{
+        font-size: 35px;
+    }
+
+    #searchInput{
+        width: 90%;
+    }
+
+    .converter-box{
+        width: 100%;
+    }
+
+}
+
+/* ================= API STOCKS ================= */
+
+.live-market,
+.live-crypto,
+.portfolio-section{
+
+    padding: 100px 8%;
+    text-align: center;
+}
+
+.api-stock-container,
+.crypto-live-container{
+
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.api-card,
+.crypto-live-card{
+
+    width: 250px;
+    padding: 30px;
+
+    border-radius: 15px;
+
+    background: rgba(255,255,255,0.08);
+
+    backdrop-filter: blur(10px);
+}
+
+/* ================= PORTFOLIO ================= */
+
+.portfolio-box{
+
+    width: 400px;
+
+    margin: auto;
+
+    background: #1e293b;
+
+    padding: 40px;
+
+    border-radius: 15px;
+}
+
+.portfolio-box input{
+
+    width: 100%;
+
+    padding: 15px;
+
+    margin-bottom: 20px;
+
+    border: none;
+
+    border-radius: 10px;
+}
+
+.portfolio-box button{
+
+    padding: 12px 20px;
+
+    border: none;
+
+    background: #38bdf8;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+}
+
+#portfolioList{
+
+    margin-top: 30px;
+
+    list-style: none;
+}
+
+/* ================= LOGIN ================= */
+
+.login-popup{
+
+    position: fixed;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0,0,0,0.7);
+
+    display: none;
+
+    justify-content: center;
+    align-items: center;
+
+    z-index: 9999;
+}
+
+.login-box{
+
+    background: #1e293b;
+
+    padding: 40px;
+
+    border-radius: 15px;
+
+    width: 350px;
+}
+
+.login-box input{
+
+    width: 100%;
+
+    padding: 15px;
+
+    margin-bottom: 20px;
+
+    border: none;
+
+    border-radius: 10px;
+}
+
+.login-box button{
+
+    width: 100%;
+
+    padding: 15px;
+
+    border: none;
+
+    background: #38bdf8;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+}
+
+#loginBtn{
+
+    position: fixed;
+
+    bottom: 30px;
+    left: 30px;
+
+    padding: 15px 20px;
+
+    border: none;
+
+    background: #38bdf8;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+}
+
